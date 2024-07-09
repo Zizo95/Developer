@@ -233,3 +233,80 @@ box-shadow: 0 0 25px aqua,
 }
     
 }
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: black;
+    color: white;
+}
+.about h2 span{
+    color: aqua;
+    text-shadow: 0 0 50px aqua;
+}
+.about-img{
+    border-radius: 50%;
+}
+.about-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px aqua;
+    top: 1rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+    box-shadow: 0 0 50px aqua,
+                0 0 100px aqua
+}
+.heading{
+    text-align: center;
+    font-size: 8rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.5;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.about-content .text-animation span::before{
+    content: "Fontend Develper";
+    color: aqua;
+    animation: words 28s infinite;
+}
+.about-content .text-animation span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 8px solid black;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+::-webkit-scrollbar{
+    width:15%;
+}
+::-webkit-scrollbar-thumb{
+    background-color: aqua;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+    width: 50px;
+}
+.services{
+    background: black;
+    color: white;
+}
+.services h2{
+    margin-bottom: 5rem;
+    color: white;
+}
