@@ -178,61 +178,9 @@ box-shadow: 0 0 25px aqua,
 }
 .text-animation span{
     position: relative;
-}
-.text-animation span::before{
-    content: "Fontend Develper";
     color: aqua;
-    animation: words 28s infinite;
 }
-.text-animation span::after{
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 8px solid black;
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
-}
-@keyframes cursor{
-    to{
-        border-left: 2px solid aqua;
-    }
-}
-@keyframes words{
-    0%,
-    20%{
-        content: "Frontend Developer";
-    }
-    
-    
-}
-@keyframes typing{
-    10%,
-    15%,
-    30%,
-    35%,
-    50%,
-    55%,
-    70%,
-    75%,
-    90%,
-    95%{
-        width: 0;
-    }
-5%,
-20%,
-25%,
-40%,
-45%,
-60%,
-65%,
-80%,
-85%{
-    width: calc(100% + 8px);
-}
-    
-}
+
 .about{
     display: flex;
     justify-content: center;
@@ -407,4 +355,87 @@ resize: none;
     margin: 0 10px;
     transition: 0.3s ease;
 
+}
+@media screen and (max-width:1285px) {
+    html{
+        font-size: 55%;
+    }
+    .service-container{
+        padding-bottom: 7rem;
+        margin: 0 5rem;
+    }
+}
+@media screen and (max-width:991px)   {
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media screen and (max-width:895px)   {
+#menu-icon{
+    display: block;
+}
+.navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem  3%;
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid aqua;
+    border-bottom:2px solid aqua ;
+    display: none;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+}
+.navbar.active{
+    display: block;
+}
+.navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+}
+.home{
+    margin: 5rem 4rem;
+    flex-direction: column;
+}
+.home-content h3{
+font-size: 2.6rem;
+}
+.home-content h1{
+    font-size: 8rem;
+    margin-top: 3rem;
+}
+.home-content p{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.home-conten img{
+    width: 56vw;
+    margin-top: -2rem;
+}
+.about{
+    flex-direction: column-reverse;
+}
+.about img{
+    width: 52vw;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.services h2{
+    margin-bottom: 3rem;
+}
+.service-container{
+    grid-template-columns: repeat(1,1fr);
+}
 }
