@@ -330,8 +330,9 @@ resize: none;
 .contact form .btn{
     margin-top: 2rem;
 }
-.projectz{
+.projects{
     display: flex;
+    gap: 50px;
     
 }
 figure{
